@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. ./backup.conf
+
+rsync -aPv -e "ssh -i $HOME/.ssh/serverone_key" $FILE_NAME aman@$IP_address:backupdir/
+
+exit 0
